@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Nibiru",
+        "logo": "https://raw.githubusercontent.com/forbole/big-dipper-networks/main/logos/cosmoshub.svg?sanitize=true",
+        "cover": "https://raw.githubusercontent.com/forbole/big-dipper-networks/main/covers/cosmos.png?sanitize=true",
+        "links": [
+            {
+                "name": "Testnet",
+                "chain_id": "nibiru-testnet-1",
+                "url": " https://explorer.testnet-1.nibiru.fi"
+            }
+        ]
+    }
+]

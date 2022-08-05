@@ -20,7 +20,7 @@ import {
   Selected,
 } from '@recoil/big_dipper_networks/types';
 
-const NETWORK_LIST_API = 'https://raw.githubusercontent.com/forbole/big-dipper-networks/main/networks.json';
+import networks_list from '../../configs/networks.json';
 
 export const useBigDipperNetworksRecoil = () => {
   const [_, setNetworks] = useRecoilState(writeNetworks) as [Networks, SetterOrUpdater<Networks>];
@@ -28,13 +28,14 @@ export const useBigDipperNetworksRecoil = () => {
 
   useEffect(() => {
     const getNetworkList = async () => {
-      let data = [];
-      try {
-        const results = await axios.get(NETWORK_LIST_API);
-        data = results?.data ?? [];
-      } catch (error) {
-        console.error(error);
-      }
+      // let data = [];
+      // try {
+      //   const results = await axios.get(NETWORK_LIST_API);
+      //   data = results?.data ?? [];
+      // } catch (error) {
+      //   console.error(error);
+      // }
+      let data = networks_list;
       const formattedData = data
         .map((x) => BigDipperNetwork.fromJson(x))
         .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));

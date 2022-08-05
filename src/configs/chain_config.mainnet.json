@@ -1,24 +1,24 @@
 {
-  "title": "Desmos Block Explorer",
-  "network": "desmos-mainnet-1",
-  "icon": "https://raw.githubusercontent.com/forbole/big-dipper-assets/master/desmos/icon.svg?sanitize=true",
+  "title": "Nibiru Block Explorer",
+  "network": "nibiru-1",
+  "icon": "https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/chains/cosmos/public/images/icon.svg?sanitize=true",
   "logo": {
-    "default": "https://raw.githubusercontent.com/forbole/big-dipper-assets/master/desmos/logo.svg?sanitize=true"
+    "default": "https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/chains/cosmos/public/images/logo.svg?sanitize=true"
   },
   "prefix": {
-    "consensus": "desmosvalcons",
-    "validator": "desmosvaloper",
-    "account": "desmos"
+    "consensus": "nibivalcons",
+    "validator": "nibivaloper",
+    "account": "nibi"
   },
   "genesis": {
-    "time": "2021-07-13T08:00:00",
+    "time": "2022-08-05T00:00:00",
     "height": 1
   },
-  "primaryTokenUnit": "udsm",
-  "votingPowerTokenUnit": "udsm",
+  "primaryTokenUnit": "unibi",
+  "votingPowerTokenUnit": "unibi",
   "tokenUnits": {
-    "udsm": {
-      "display": "dsm",
+    "unibi": {
+      "display": "nibi",
       "exponent": 6
     }
   },
