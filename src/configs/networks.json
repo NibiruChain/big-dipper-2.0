@@ -6,8 +6,8 @@
         "links": [
             {
                 "name": "Testnet",
-                "chain_id": "nibiru-testnet-1",
-                "url": " https://explorer.testnet-1.nibiru.fi"
+                "chain_id": "nibiru-testnet-2",
+                "url": " https://explorer.testnet-2.nibiru.fi"
             }
         ]
     }

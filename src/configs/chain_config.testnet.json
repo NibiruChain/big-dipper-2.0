@@ -1,6 +1,6 @@
 {
   "title": "Nibiru Block Explorer",
-  "network": "nibiru-testnet-1",
+  "network": "nibiru-testnet-2",
   "icon": "https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/chains/cosmos/public/images/icon.svg?sanitize=true",
   "logo": {
     "default": "https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/chains/cosmos/public/images/logo.svg?sanitize=true"
@@ -11,7 +11,7 @@
     "account": "nibi"
   },
   "genesis": {
-    "time": "2022-08-05T00:00:00",
+    "time": "2022-08-17T00:00:00",
     "height": 1
   },
   "primaryTokenUnit": "unibi",
