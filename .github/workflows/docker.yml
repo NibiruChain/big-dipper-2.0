@@ -13,15 +13,15 @@ on:
       bigdipper_host:
         description: Big Dipper Host
         required: true
-        default: explorer.testnet-2.nibiru.fi
+        default: testnet-3.nibiru.fi
       graphql_host:
         description: GraphQL Host
         required: true
-        default: graphql.explorer.testnet-2.nibiru.fi
+        default: graphql.testnet-3.nibiru.fi
       public_rpc_websocket:
         description: Public RPC Websocket endpoint
         required: true
-        default: wss://rpc.testnet-2.nibiru.fi/websocket
+        default: wss://rpc.testnet-3.nibiru.fi/websocket
 
 jobs:
   docker:
