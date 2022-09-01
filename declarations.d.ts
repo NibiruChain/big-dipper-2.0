@@ -88,3 +88,7 @@ type MsgCoin = {
   denom: string;
   amount: string;
 }
+
+interface Window {
+  keplr: any;
+}

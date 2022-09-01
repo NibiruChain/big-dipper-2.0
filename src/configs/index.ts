@@ -14,9 +14,24 @@ const getChainConfig = () => {
   return chainConfigTestnet;
 };
 
+const getKeplrConfig = () => {
+  const chainID = process.env.NEXT_PUBLIC_KEPLR_CHAIN_ID;
+  const chainName = process.env.NEXT_PUBLIC_KEPLR_CHAIN_NAME || 'Nibiru';
+  const rpcAddress = process.env.NEXT_PUBLIC_KEPLR_RPC_ADDRESS || 'http://localhost:26657';
+  const lcdAddress = process.env.NEXT_PUBLIC_KEPLR_LCD_ADDRESS || 'http://localhost:1317';
+  return {
+    chainID,
+    chainName,
+    rpcAddress,
+    lcdAddress,
+  };
+};
+
 const chainConfig = getChainConfig();
+const keplrConfig = getKeplrConfig();
 
 export {
   chainConfig,
   generalConfig,
+  keplrConfig,
 };

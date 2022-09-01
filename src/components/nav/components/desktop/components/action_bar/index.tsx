@@ -6,6 +6,7 @@ import {
   Network,
   NetworkList,
   SettingsList,
+  Keplr,
 } from './components';
 import { SearchBar } from '../../..';
 
@@ -31,6 +32,7 @@ const ActionBar: React.FC<{
           className={classnames(classes.network, { open: isNetwork })}
           toggleNetwork={toggleNetwork}
         />
+        <Keplr />
         <SettingsList />
       </div>
       <NetworkList

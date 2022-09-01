@@ -22,6 +22,22 @@ on:
         description: Public RPC Websocket endpoint
         required: true
         default: wss://rpc.testnet-3.nibiru.fi/websocket
+      keplr_chain_id:
+        description: Chain ID to be used in Keplr suggest chain
+        required: true
+        default: nibiru-testnet-3
+      keplr_chain_name:
+        description: Chain name to be used in Keplr suggest chain
+        required: true
+        default: "Nibiru Testnet"
+      keplr_chain_rpc_address:
+        description: URL to public RPC endpoint
+        required: true
+        default: https://rpc.testnet-3.nibiru.fi
+      keplr_chain_lcd_address:
+        description: URL to public LCD endpoint
+        required: true
+        default: https://lcd.testnet-3.nibiru.fi
 
 jobs:
   docker:
@@ -49,4 +65,7 @@ jobs:
             NEXT_PUBLIC_GRAPHQL_URL=${{ github.event.inputs.secure == 'true' && 'https' || 'http' }}://${{ github.event.inputs.graphql_host }}/v1/graphql
             NEXT_PUBLIC_GRAPHQL_WS=${{ github.event.inputs.secure == 'true' && 'wss' || 'ws' }}://${{ github.event.inputs.graphql_host }}/v1/graphql
             NEXT_PUBLIC_RPC_WEBSOCKET=${{ github.event.inputs.public_rpc_websocket }}
-
+            NEXT_PUBLIC_KEPLR_CHAIN_ID=${{ github.event.inputs.keplr_chain_id }}
+            NEXT_PUBLIC_KEPLR_CHAIN_NAME=${{ github.event.inputs.keplr_chain_name }}
+            NEXT_PUBLIC_KEPLR_RPC_ADDRESS=${{ github.event.inputs.keplr_chain_rpc_address }}
+            NEXT_PUBLIC_KEPLR_LCD_ADDRESS=${{ github.event.inputs.keplr_chain_lcd_address }}
