@@ -16,8 +16,10 @@ const toggleNetwork = jest.fn();
 jest.mock('./components', () => ({
   Network: (props) => <div id="network" {...props} />,
   NetworkList: (props) => <div id="NetworkList" {...props} />,
+  Keplr: (props) => <div id="Keplr" {...props} />,
   SettingsList: (props) => <div id="SettingsList" {...props} />,
 }));
+
 // ==================================
 // unit tests
 // ==================================

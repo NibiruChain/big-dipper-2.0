@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import { useEffect } from 'react';
-import axios from 'axios';
 import * as R from 'ramda';
 import {
   useRecoilState,
@@ -20,7 +19,7 @@ import {
   Selected,
 } from '@recoil/big_dipper_networks/types';
 
-import networks_list from '../../configs/networks.json';
+import networksList from '../../configs/networks.json';
 
 export const useBigDipperNetworksRecoil = () => {
   const [_, setNetworks] = useRecoilState(writeNetworks) as [Networks, SetterOrUpdater<Networks>];
@@ -35,7 +34,7 @@ export const useBigDipperNetworksRecoil = () => {
       // } catch (error) {
       //   console.error(error);
       // }
-      let data = networks_list;
+      const data = networksList;
       const formattedData = data
         .map((x) => BigDipperNetwork.fromJson(x))
         .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
