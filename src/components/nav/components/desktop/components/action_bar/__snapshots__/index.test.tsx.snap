@@ -50,6 +50,9 @@ exports[`screen: Nav/ActionBar displays network 1`] = `
       toggleNetwork={[MockFunction]}
     />
     <div
+      id="Keplr"
+    />
+    <div
       id="SettingsList"
     />
   </div>
@@ -109,6 +112,9 @@ exports[`screen: Nav/ActionBar it renders 1`] = `
       className="makeStyles-network"
       id="network"
       toggleNetwork={[MockFunction]}
+    />
+    <div
+      id="Keplr"
     />
     <div
       id="SettingsList"

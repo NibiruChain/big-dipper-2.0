@@ -12,7 +12,8 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "test": "NODE_ENV=test jest",
     "e2e": "cypress open",
-    "graphql:codegen": "graphql-codegen"
+    "graphql:codegen": "graphql-codegen",
+    "update-jest-snapshots": "jest --updateSnapshot"
   },
   "dependencies": {
     "@apollo/client": "^3.1.5",
