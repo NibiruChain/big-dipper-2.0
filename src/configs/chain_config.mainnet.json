@@ -1,9 +1,9 @@
 {
   "title": "Nibiru Block Explorer",
-  "network": "nibiru-1",
-  "icon": "https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/chains/cosmos/public/images/icon.svg?sanitize=true",
+  "network": "nibiru",
+  "icon": "/images/nibiru-mark.png",
   "logo": {
-    "default": "https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/chains/cosmos/public/images/logo.svg?sanitize=true"
+    "default": "/images/nibiru-mark.png"
   },
   "prefix": {
     "consensus": "nibivalcons",
@@ -11,7 +11,7 @@
     "account": "nibi"
   },
   "genesis": {
-    "time": "2022-08-05T00:00:00",
+    "time": "2022-10-01T00:00:00",
     "height": 1
   },
   "primaryTokenUnit": "unibi",
@@ -19,6 +19,10 @@
   "tokenUnits": {
     "unibi": {
       "display": "nibi",
+      "exponent": 6
+    },
+    "unusd": {
+      "display": "nusd",
       "exponent": 6
     }
   },
