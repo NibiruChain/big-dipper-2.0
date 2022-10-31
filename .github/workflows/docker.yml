@@ -13,19 +13,19 @@ on:
       bigdipper_host:
         description: Big Dipper Host
         required: true
-        default: testnet-3.nibiru.fi
+        default: testnet-1.nibiru.fi
       graphql_host:
         description: GraphQL Host
         required: true
-        default: graphql.testnet-3.nibiru.fi
+        default: graphql.testnet-1.nibiru.fi
       public_rpc_websocket:
         description: Public RPC Websocket endpoint
         required: true
-        default: wss://rpc.testnet-3.nibiru.fi/websocket
+        default: wss://rpc.testnet-1.nibiru.fi/websocket
       keplr_chain_id:
         description: Chain ID to be used in Keplr suggest chain
         required: true
-        default: nibiru-testnet-3
+        default: nibiru-testnet-1
       keplr_chain_name:
         description: Chain name to be used in Keplr suggest chain
         required: true
@@ -33,11 +33,11 @@ on:
       keplr_chain_rpc_address:
         description: URL to public RPC endpoint
         required: true
-        default: https://rpc.testnet-3.nibiru.fi
+        default: https://rpc.testnet-1.nibiru.fi
       keplr_chain_lcd_address:
         description: URL to public LCD endpoint
         required: true
-        default: https://lcd.testnet-3.nibiru.fi
+        default: https://lcd.testnet-1.nibiru.fi
 
 jobs:
   docker:

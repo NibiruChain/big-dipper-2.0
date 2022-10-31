@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { useEffect } from 'react';
+import axios from 'axios';
 import * as R from 'ramda';
 import {
   useRecoilState,
@@ -19,7 +20,7 @@ import {
   Selected,
 } from '@recoil/big_dipper_networks/types';
 
-import networksList from '../../configs/networks.json';
+const NETWORK_LIST_API = 'https://networks.testnet.nibiru.fi/networks';
 
 export const useBigDipperNetworksRecoil = () => {
   const [_, setNetworks] = useRecoilState(writeNetworks) as [Networks, SetterOrUpdater<Networks>];
@@ -27,17 +28,18 @@ export const useBigDipperNetworksRecoil = () => {
 
   useEffect(() => {
     const getNetworkList = async () => {
-      // let data = [];
-      // try {
-      //   const results = await axios.get(NETWORK_LIST_API);
-      //   data = results?.data ?? [];
-      // } catch (error) {
-      //   console.error(error);
-      // }
-      const data = networksList;
-      const formattedData = data
-        .map((x) => BigDipperNetwork.fromJson(x))
-        .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
+      let data = [];
+      try {
+        const results = await axios.get(NETWORK_LIST_API);
+        console.log(results);
+        data = results?.data ?? [];
+      } catch (error) {
+        console.error(error);
+      }
+      // const formattedData = data
+      //   .map((x) => BigDipperNetwork.fromJson(x))
+      //   .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
+      const formattedData = [BigDipperNetwork.fromJson(data)];
       setNetworks(formattedData);
     };
     getNetworkList();
