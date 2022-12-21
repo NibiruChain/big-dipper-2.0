@@ -24,7 +24,11 @@
     "unusd": {
       "display": "nusd",
       "exponent": 6
-    }
+    },
+    "uusdt": {
+      "display": "usdt",
+      "exponent": 6
+    }    
   },
   "extra": {
     "profile": true
