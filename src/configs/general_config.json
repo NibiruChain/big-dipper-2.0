@@ -6,6 +6,7 @@
   "github": {
     "reportIssue": "https://github.com/NibiruChain/big-dipper-2.0/issues"
   },
+  "basePath": "/desmos",
   "previewImage": "https://bigdipper.live/images/big-dipper-social-media.png",
-  "version": "v2.1.0"
+  "version": "base-v2.1.2"
 }

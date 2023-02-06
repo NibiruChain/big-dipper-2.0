@@ -1,44 +1,57 @@
 # Unreleased
 
+## Changes
+- 
+
+# base-v2.1.2 - 2022-09-11
+
 ## Fixes
-- Add missing dependency of `useEffect` in `useProfilesRecoil` to avoid desmos profile from not being loaded ([\#904](https://github.com/forbole/big-dipper-2.0-cosmos/issues/904))
+- Fixed `/font` after chain prefix `/desmos` in global.css ([\#992](https://github.com/forbole/big-dipper-2.0-cosmos/issues/992))
+
+
+# base-v2.1.1 - 2022-08-29
+
+## Fixes
+- Added missing dependency of `useEffect` in `useProfilesRecoil` to avoid desmos profile from not being loaded ([\#904](https://github.com/forbole/big-dipper-2.0-cosmos/issues/904))
 
 ## Changes
-- Update validator and account details to not be found if bech32 is invalid
+- Updated validator and account details to not be found if bech32 is invalid
 - Removed the use of NEXT_PUBLIC_URL
-- Update graphql types generation structure (in preparation for third party modules)
-- Update preview image location
+- Updated graphql types generation structure (in preparation for third party modules)
+- Updated preview image location
+- Updated change url files ([\#972](https://github.com/forbole/big-dipper-2.0-cosmos/issues/972))
+- Added `NEXT_PUBLIC_MATOMO_URL` and `NEXT_PUBLIC_MATOMO_SITE_ID` to github workflow production ([\#972](https://github.com/forbole/big-dipper-2.0-cosmos/issues/972))
 
-# base-v2.1.0 - 2021-04-19
+# base-v2.1.0 - 2022-04-19
 
 ## Changes
 - Updated not found and 404 logo ([\#792](https://github.com/forbole/big-dipper-2.0-cosmos/issues/792))
 - Fixed params % display ([\#795](https://github.com/forbole/big-dipper-2.0-cosmos/issues/795))
 - Updated params page if time period less than 1 day then show seconds ([\#797](https://github.com/forbole/big-dipper-2.0-cosmos/issues/797))
-- Add token price history component ([\#784](https://github.com/forbole/big-dipper-2.0-cosmos/issues/784))
-- Update Account details hasura actions to default call 100 items instead of 10 for better performance
-- Add back proposal details quorum % ([\#788](https://github.com/forbole/big-dipper-2.0-cosmos/issues/788))
-- Update validator details hasura actions performances ([\#812](https://github.com/forbole/big-dipper-2.0-cosmos/issues/812))
+- Added token price history component ([\#784](https://github.com/forbole/big-dipper-2.0-cosmos/issues/784))
+- Updated Account details hasura actions to default call 100 items instead of 10 for better performance
+- Added back proposal details quorum % ([\#788](https://github.com/forbole/big-dipper-2.0-cosmos/issues/788))
+- Updated validator details hasura actions performances ([\#812](https://github.com/forbole/big-dipper-2.0-cosmos/issues/812))
 
 ## Fixes
 - Fixed commission being displayed for non validator accounts ([\#787](https://github.com/forbole/big-dipper-2.0-cosmos/issues/787))
-- Add community tax in to apr calculation ([\#810](https://github.com/forbole/big-dipper-2.0-cosmos/issues/810))
+- Added community tax in to apr calculation ([\#810](https://github.com/forbole/big-dipper-2.0-cosmos/issues/810))
 
-# base-v2.0.2 - 2021-03-23
+# base-v2.0.2 - 2022-03-23
 
 ## Bug fixes
 - Fixed proposal details chart percentage display
 
-# base-v2.0.1 - 2021-03-17
+# base-v2.0.1 - 2022-03-17
 ## Bug fixes
 - Fixed online voting power total ([\#800](https://github.com/forbole/big-dipper-2.0-cosmos/issues/800))
 
-# base-v2.0.0 - 2021-03-10
+# base-v2.0.0 - 2022-03-10
 
 ## Changes
 - Changed online voting power to be a query instead of a subscription ([\#638](https://github.com/forbole/big-dipper-2.0-cosmos/issues/638))
 - Optimised rendering of Proposal Details page ([\#763](https://github.com/forbole/big-dipper-2.0-cosmos/issues/763))
-- Update online voting power display ([\#776](https://github.com/forbole/big-dipper-2.0-cosmos/issues/776))
+- Updated online voting power display ([\#776](https://github.com/forbole/big-dipper-2.0-cosmos/issues/776))
 - Improved initial loading speed by asyncing top level functions ([\#773](https://github.com/forbole/big-dipper-2.0-cosmos/issues/773))
 ## Bug fixes
 - Fixed Apr error if bonded tokens is 0 ([\#758](https://github.com/forbole/big-dipper-2.0-cosmos/issues/758))
@@ -46,33 +59,33 @@
 ## Breaking
 - [Bdjuno](https://github.com/forbole/bdjuno) must be on `v2.0.0`
 
-# base-v2.0.0-rc3 - 2021-02-25
+# base-v2.0.0-rc3 - 2022-02-25
 
 ## Changes
 - Changed `NEXT_PUBLIC_WS_CHAIN_URL` to `NEXT_PUBLIC_RPC_WEBSOCKET` for clarification
 - Changed `NEXT_PUBLIC_CHAIN_STATUS` to `NEXT_PUBLIC_CHAIN_TYPE` for clarification
 
 ## Migration
-- Change env `NEXT_PUBLIC_WS_CHAIN_URL` to `NEXT_PUBLIC_RPC_WEBSOCKET` or don't. It's backwards compatible
-- Change env `NEXT_PUBLIC_CHAIN_STATUS` to `NEXT_PUBLIC_CHAIN_TYPE` or don't. It's backwards compatible
+- Changed env `NEXT_PUBLIC_WS_CHAIN_URL` to `NEXT_PUBLIC_RPC_WEBSOCKET` or don't. It's backwards compatible
+- Changed env `NEXT_PUBLIC_CHAIN_STATUS` to `NEXT_PUBLIC_CHAIN_TYPE` or don't. It's backwards compatible
 
 ## Breaking
 - [Bdjuno](https://github.com/forbole/bdjuno) must be on `v2.0.0`
 
-# base-v2.0.0-rc2 - 2021-02-24
+# base-v2.0.0-rc2 - 2022-02-24
 
 ## Changes
 - Updated market cap display ([\#698](https://github.com/forbole/big-dipper-2.0-cosmos/issues/698))
 - Optimised validator details and account details to prevent random polling behavior ([\#703](https://github.com/forbole/big-dipper-2.0-cosmos/issues/703))
-- Add hasura actions error handling in account details ([\#713](https://github.com/forbole/big-dipper-2.0-cosmos/issues/713))
-- Display accounts even if balance is 0 and does not exist ([\#692](https://github.com/forbole/big-dipper-2.0-cosmos/issues/692))
-- Update handling of 18 decimal places denoms ([\#724](https://github.com/forbole/big-dipper-2.0-cosmos/issues/724))
+- Added hasura actions error handling in account details ([\#713](https://github.com/forbole/big-dipper-2.0-cosmos/issues/713))
+- Updated to display accounts even if balance is 0 and does not exist ([\#692](https://github.com/forbole/big-dipper-2.0-cosmos/issues/692))
+- Updated handling of 18 decimal places denoms ([\#724](https://github.com/forbole/big-dipper-2.0-cosmos/issues/724))
 
 ## Bug fixes
-- Add better handling of get denom return types ([\#735](https://github.com/forbole/big-dipper-2.0-cosmos/issues/735))
-- Update ui to match the improved hasura actions return types
+- Added better handling of get denom return types ([\#735](https://github.com/forbole/big-dipper-2.0-cosmos/issues/735))
+- Updated ui to match the improved hasura actions return types
 
-# base-v2.0.0-rc1 - 2021-02-07
+# base-v2.0.0-rc1 - 2022-02-07
 
 ## Changes
 - Updated Hasura Actions
@@ -81,33 +94,33 @@
 
 - [Bdjuno](https://github.com/forbole/bdjuno) must be on `v1.0.0`
 
-# base-v1.10.0 - 2021-01-25
+# base-v1.10.0 - 2022-01-25
 
 ## Changes
 - Optimized initial loading by setting basic details first then profiles after ([\#629](https://github.com/forbole/big-dipper-2.0-cosmos/issues/629))
-- Add vp token unit in config ([\#645](https://github.com/forbole/big-dipper-2.0-cosmos/issues/645))
+- Added vp token unit in config ([\#645](https://github.com/forbole/big-dipper-2.0-cosmos/issues/645))
 
 ## Bug fixes
-- Fix home page validator image url not displaying correctly ([\#632](https://github.com/forbole/big-dipper-2.0-cosmos/issues/632))
+- Fixed home page validator image url not displaying correctly ([\#632](https://github.com/forbole/big-dipper-2.0-cosmos/issues/632))
 - Fix validator anc account details possible infinite load due to dayjs in hook
-- Add description sanitization to proposals list ([\#666](https://github.com/forbole/big-dipper-2.0-cosmos/issues/666))
-- Fix pagination hook page callback ([\#667](https://github.com/forbole/big-dipper-2.0-cosmos/issues/667))
-- Show address if name or moniker is empty ([\#668](https://github.com/forbole/big-dipper-2.0-cosmos/issues/668))
+- Added description sanitization to proposals list ([\#666](https://github.com/forbole/big-dipper-2.0-cosmos/issues/666))
+- Fixed pagination hook page callback ([\#667](https://github.com/forbole/big-dipper-2.0-cosmos/issues/667))
+- Showed address if name or moniker is empty ([\#668](https://github.com/forbole/big-dipper-2.0-cosmos/issues/668))
 
 ## Migration
 
 - [v1.9.0 to v1.10.0](https://docs.bigdipper.live/cosmos-based/frontend/migrations/v1.9.0-to-v1.10.0)
 
-# base-v1.9.0 - 2021-01-10
+# base-v1.9.0 - 2022-01-10
 
 ## Changes
-- Add logs in tx details ([\#515](https://github.com/forbole/big-dipper-2.0-cosmos/issues/515))
-- Add tombstoned status ([\#600](https://github.com/forbole/big-dipper-2.0-cosmos/issues/600))
-- Add manual versioning in ui ([\#605](https://github.com/forbole/big-dipper-2.0-cosmos/issues/605))
+- Added logs in tx details ([\#515](https://github.com/forbole/big-dipper-2.0-cosmos/issues/515))
+- Added tombstoned status ([\#600](https://github.com/forbole/big-dipper-2.0-cosmos/issues/600))
+- Added manual versioning in ui ([\#605](https://github.com/forbole/big-dipper-2.0-cosmos/issues/605))
 - Optimized tx list for chains with heavy traffic ([\#602](https://github.com/forbole/big-dipper-2.0-cosmos/issues/602))
 - Setup case insensitive search in dtags ([\#592](https://github.com/forbole/big-dipper-2.0-cosmos/issues/592))
-- Fix profiles logic ([\#591](https://github.com/forbole/big-dipper-2.0-cosmos/issues/591))
-- Add AvatarNameListMsg for handling msgs with multiple users ([\#619](https://github.com/forbole/big-dipper-2.0-cosmos/issues/619))
+- Fixed profiles logic ([\#591](https://github.com/forbole/big-dipper-2.0-cosmos/issues/591))
+- Added AvatarNameListMsg for handling msgs with multiple users ([\#619](https://github.com/forbole/big-dipper-2.0-cosmos/issues/619))
 
 
 # base-v1.8.4 - 2021-12-08
