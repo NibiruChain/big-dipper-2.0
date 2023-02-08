@@ -61,7 +61,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: ghcr.io/nibiruchain/big-dipper:${{ github.event.inputs.version }}
           build-args: |
             NEXT_PUBLIC_URL=${{ github.event.inputs.secure == 'true' && 'https' || 'http' }}://${{ github.event.inputs.bigdipper_host }}
