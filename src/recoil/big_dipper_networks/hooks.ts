@@ -20,7 +20,7 @@ import {
   Selected,
 } from '@recoil/big_dipper_networks/types';
 
-const NETWORK_LIST_API = 'https://networks.testnet.nibiru.fi/networks';
+const NETWORK_LIST_API = 'https://networks.testnet.nibiru.fi/big-dipper';
 
 export const useBigDipperNetworksRecoil = () => {
   const [_, setNetworks] = useRecoilState(writeNetworks) as [Networks, SetterOrUpdater<Networks>];
